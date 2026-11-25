@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8fafc;
+    color: #14213d;
+}
+
+header {
+    background: white;
+    padding: 18px 7%;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    background: #102b55;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.logo h2 {
+    font-size: 17px;
+    color: #102b55;
+}
+
+.logo small {
+    font-size: 10px;
+    color: #777;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #14213d;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4a017;
+}
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background: linear-gradient(120deg, #102b55, #1b477e);
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.welcome {
+    color: #e5b93f;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #e5b93f;
+}
+
+.description {
+    color: #dce5f1;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: #e5b93f;
+    color: #102b55;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+section:not(.hero) {
+    padding: 90px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #c69b25;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.about-content p {
+    line-height: 1.8;
+    color: #64748b;
+    margin-top: 15px;
+}
+
+.about-card {
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.about-card:hover,
+.news-card:hover {
+    transform: translateY(-8px);
+}
+
+.news {
+    background: #edf2f8;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.news-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.news-card p {
+    color: #64748b;
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+.activity-text {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    line-height: 2;
+    color: #64748b;
+}
+
+.contact {
+    background: #edf2f8;
+}
+
+.contact-box {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 12px;
+    line-height: 3;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+footer {
+    background: #10213d;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    line-height: 2;
+}
+
+footer h3 {
+    color: #e5b93f;
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about-content,
+    .news-container {
+        grid-template-columns: 1fr;
+    } 
+   
+    .hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
